@@ -1,0 +1,49 @@
+/*
+ Theme Name:   bootScore Child
+ Description:  bootScore Child Theme
+ Author:       bootScore
+ Author URI:   https://bootscore.me
+ Template:     bootscore-main
+ Version:      5.1.3.1
+ Text Domain:  bootscore
+*/
+
+/* 
+All style editing is done via css/scss/_bscore_custom.scss
+*/
+
+.bsc-avatar .avatar {
+	border-radius: 50%;
+}
+
+.bsc-card-task .list-group-item .bsc-action {
+	min-width: 155px;
+}
+
+.custom-archive-blog .custom-pagination li {
+	list-style-type: none;
+}
+
+.custom-pagination-wrap {padding: 0; margin: 0 auto}
+.custom-pagination-wrap ul {list-style: none; margin: 0; padding: 0; text-align: center;}
+.custom-pagination-wrap li {display: inline}
+.custom-pagination-wrap .active a {
+	text-align: center;
+	text-decoration: none;
+}
+
+.task-margin {
+	margin-bottom: 10px;
+}
+
+.accordion-button {
+	background-color: transparent;
+}
+
+.accordion-button:not(.collapsed) {
+	background-color: transparent;
+}
+
+.bsc-card-task .list-group-item .bsc-assignment {
+	min-width: 130px;
+}

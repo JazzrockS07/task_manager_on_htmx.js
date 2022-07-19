@@ -1,0 +1,99 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+$enable-responsive-font-sizes: true;
+
+$font-family-base: "Lato", sans-serif;
+
+// Color system
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 530px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+$container-max-widths: (
+  sm: 520px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+
+$dark: #1A3142;
+$grey: #546069;
+$light-grey: #d8dee2;
+$white: #ffffff;
+$green: #4EB4A5;
+$light-green: #bcddd8;
+$red: #E3AA75;
+$light-red: #d3beab;
+$blue:   #4B98CF;
+$light-blue:   #edf6fd;
+$bright:$light-blue;
+
+
+$colors: ();
+// stylelint-disable-next-line scss/dollar-variabl
+$colors: map-merge(
+  (
+    "bright": $bright,
+    "dark": $dark,
+    "grey": $grey,
+    "light-grey": $light-grey,
+    "white": $white,
+    "green": $green,
+    "light-green": $light-green,
+    "red": $red,
+    "light-red": $light-red,
+    "blue":   $blue,
+  ),
+  $colors
+);
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary": $dark,
+    "secondary": $light-grey,
+    "bright": $bright,
+    "dark": $dark,
+    "grey": $grey,
+    "light-grey": $light-grey,
+    "white": $white,
+    "green": $green,
+    "light-green": $light-green,
+    "red": $red,
+    "light-red": $light-red,
+    "blue":   $blue,
+  ),
+
+  $theme-colors
+);
+
+
+$font-family-base:  "Lato", sans-serif;
+$headings-font-weight:  700;
+$font-size-base: 1rem ;
+$small-font-size:             .65rem;
+$h1-font-size:  $font-size-base * 2;
+$h2-font-size:  $font-size-base * 1.4;
+$h3-font-size:  $font-size-base * 1.05;
+$h4-font-size:  $font-size-base ;
+$h5-font-size:  $font-size-base;
+$h6-font-size:  $font-size-base;
+
+
+$accordion-padding-y:                     0rem ;
+$accordion-padding-x:                     0rem ;
+$accordion-bg:                            white;
+$accordion-button-active-bg:              white;
+$accordion-border-width:                  0;
+$accordion-border-radius:                 0;
+$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) ;

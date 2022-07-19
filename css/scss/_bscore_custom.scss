@@ -1,0 +1,225 @@
+.bsc-header {
+  padding-top:64px;
+  position: relative;
+  .bsc-main-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      height: 64px;
+  }
+  .navbar-brand {
+    min-width: 80px;
+    img{
+      max-height: 50px;
+    }
+  }
+  .bsc-projects-dropdown {
+      height: 64px;
+      .dropdown-menu {
+          position: absolute;
+          top:64px;
+      }
+  }
+  .bsc-navbar-icons {
+      height: 64px;
+      // de ce nu se centreaza cu d-flex align-items-center?
+      display: none;
+  }
+
+  .bsc-search-form {
+      display: flex;
+      align-items: center;
+      background-color: $input-bg;
+      border: $input-btn-border-width solid $input-border-color;
+      @if $enable-rounded {
+        border-radius: $input-border-radius;
+      } @else {
+        border-radius: 0;
+      }
+      .form-control {
+        border-color: transparent;
+        background-color: transparent;
+        box-shadow: none;
+        &:focus {
+          border-color: transparent;
+          box-shadow: none;
+        }
+      }
+      &:not([class^="input-group-"]) .btn {
+        padding: 0 .5rem;
+      }
+      .btn + .form-control {
+        padding-left: 0;
+  }
+} 
+}
+
+.bsc-avatar {
+  flex-shrink: 0;
+  font-size: 1rem;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  z-index: 0;
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-online,
+  &-offline {
+    &::before,
+    &::after {
+      position: absolute;
+      right: 5%;
+      bottom: 5%;
+      width: 20%;
+      height: 20%;
+      content: "";
+      border-radius: 50%;
+    }
+
+    &::before {
+      width: 22%;
+      height: 22%;
+      right: 4%;
+      bottom: 4%;
+      background-color: white;
+    }
+  }
+
+  &-online::after {
+    background-color: $success;
+  }
+
+  &-offline::after {
+    background-color: theme-color('dark-gray');
+  }
+
+  &-title {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: theme-color('dark-gray');
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-xl,
+  &-xxl {
+    font-size: 1.70833rem;
+    width: 5.125rem;
+    height: 5.125rem;
+  }
+
+  &-lg {
+    font-size: 1.33333rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &-sm {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-weight: bold;
+  }
+
+  &-xs {
+    font-size: .825rem;
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+  }
+  &-xxs {
+    font-size: .54167rem;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    &.avatar-online,
+    &.avatar-offline {
+      &::before,
+      &::after {
+        position: absolute;
+        right: -1px;
+        bottom: -1px;
+        width: 25%;
+        height: 25%;
+        content: "";
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.bsc-card-task {
+min-width: 370px;
+.list-group-item {
+  position:relative;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  @include media-breakpoint-down(md) {
+    padding-bottom: 58px;
+  }
+  &:before {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    height:100%;
+    width: 4px;
+    background-color: #eee;
+  }
+  &-danger {
+    &:before {
+    background-color: $red;
+    }
+  }
+  .bsc-info-list {
+    min-width: 60px;
+    &-details {
+   
+    }
+  }
+  .bsc-assignment {
+    min-width: 110px;
+    .bsc-avatar {
+      position: relative;
+      top:-3.5px;
+    }
+  }
+  .bsc-task {
+    opacity:0.2;
+    &.collapsed {
+      opacity: 1;
+    }
+    .truncate {
+      overflow: hidden;
+      line-height: 18px;
+      font-size:0.8rem;
+      height:18px ;
+      text-overflow: ellipsis;
+    }
+    @include media-breakpoint-down(md) {
+    margin-top:48px;
+    position:absolute;
+    }
+  }
+  .bsc-deadline {
+    min-width: 120px;
+  }
+  .accordion-button {
+    max-width: 40px;
+  }
+  .bsc-action {
+    min-width: 130px;
+  }
+}
+}
+
