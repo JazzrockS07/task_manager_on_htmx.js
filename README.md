@@ -1,9 +1,4 @@
-# bootScore Child Theme
+# Task manager on htmx.js bootScore Child Theme
 
-Start developing your new WordPress project right away in a upgrade-safe way using overrides by copying files from [bootScore](https://github.com/crftwrk/bootscore) parent theme.
+A task manager has been created here on the html.js library, which allows to add new tasks, update the status of tasks without reloading the page
 
-## Installation
-
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
